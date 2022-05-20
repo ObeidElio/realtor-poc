@@ -1,0 +1,86 @@
+<mat-toolbar class="navbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="navbar-title">menu</mat-icon>
+    </button>
+    <span class="navbar-title">Realtor Demo</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+
+
+
+
+<div fxLayout="column" fxLayoutAlign="center">
+    <h1 class="voice-recognition-label">Voice recognition</h1>
+    <div fxLayout="row" fxLayoutAlign="space-around">
+        <button mat-raised-button class="btn-start" style="margin: 10px;" (click)="startService()">Start</button>
+        <button mat-raised-button class="btn-stop" style="margin: 10px;" (click)="stopService()">Stop</button>
+    </div>
+<div fxLayout="row" style="margin-top:20px;">
+    <div class="intent-container" fxFlex = 15 fxLayout="column">
+        <b> Top Intent</b>
+        <span class="top-intent" *ngFor="let keyphrase of keyPhrases"> {{keyphrase.Text}}</span>
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign=" space-around" >
+
+
+        <div fxLayout="column">
+            <b> Transcription </b>
+            <div class="text-container">
+                <ngx-highlight-words 
+                [textToHighlight]="service.text"
+                [searchWords]="entities"
+                highlightClassName="highlight"
+              >
+              </ngx-highlight-words>
+            </div>
+        </div>
+
+        <div class="output-container" fxLayout="column">
+            <b> Output</b>
+            <div class="text-container">
+                <p *ngFor="let data of data">{{data}}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+<!-- <div style="margin: 10px;">
+    <div style="text-align: center;">
+    <h1>Voice recognition</h1>
+    <button mat-raised-button color="primary" style="margin: 10px;" (click)="startService()">Start</button>
+    <button mat-raised-button color="warn" style="margin: 10px;" (click)="stopService()">Stop</button>
+    </div>  
+    <p><b> Prompt:</b> {{service.text}}</p>
+
+    <div fxLayout="column">
+    <div fxLayout="row"  fxLayoutAlign="space-around center">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <span><b>Intent :</b> </span> 
+            <mat-list  role="list" >
+                <mat-list-item  role="listitem"  *ngFor="let keyphrase of keyPhrases"> 
+                    <span class="keyphrase">
+                        {{keyphrase.Text}}
+                    </span>
+                </mat-list-item>
+            </mat-list>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <span> <b> Key Phrases: </b> </span> 
+            <mat-list role="list" >
+                <mat-list-item  role="listitem" *ngFor="let entity of entities"> 
+                    <span class="keyphrase">{{entity.Text}}</span>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+        <div fxLayout="column" fxLayoutAlign="space-around center" > 
+            <b> Data: </b>
+            <mat-list role="list" >
+                <mat-list-item role="listitem"  *ngFor="let data of data"> <br> {{data}} </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</div> -->

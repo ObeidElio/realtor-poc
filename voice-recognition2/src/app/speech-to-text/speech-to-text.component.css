@@ -1,0 +1,92 @@
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .keyphrase {
+      padding-bottom: 8px;
+  }
+
+  .navbar{
+      background-color: #211747 ;
+  }
+
+  .navbar-title{
+      color:#2CC84D ;
+  }
+
+  .voice-recognition-label{
+
+    text-align: center;
+  }
+
+  .btn-start{
+
+    background-color:#70e78a;
+    width:200px;
+    border-radius: 10px;
+  }
+
+  .btn-stop {
+
+    background-color: #f65a5a;
+    width:200px;
+    border-radius: 10px;
+  }
+
+  .top-intent{
+      color: white;
+      background-color: #211747;
+      width: 50%;
+      text-align: center;
+  }
+
+  .output-container{
+     margin-top:100px;
+  }
+  
+  .intent-container{
+    margin-left:20px;
+  }
+
+  .highlightText {
+    background: yellow;
+}
+
+.text-container{
+  border: solid 1px black;
+  height: 150px;
+  border-radius: 10px;
+  width:950px;
+}
